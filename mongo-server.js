@@ -59,7 +59,8 @@ app.post("/login", async (req, res) => {
       httpOnly: true,
       secure: true,     // true just for HTTPS
       sameSite: "lax",   // or 'none' + secure: true for cross-site
-      maxAge: 6 * 60 * 60 * 1000 // 6 ore
+      maxAge: 6 * 60 * 60 * 1000, // 6 h
+      domain: "mongo-backend-rya4.onrender.com" 
     });
 
     res.status(200).json({ ...userData });
