@@ -8,6 +8,7 @@ const cors = require('cors');
 const cookieParser = require("cookie-parser");
 
 const app = express();
+const PORT = process.env.PORT || 3001;
 
 app.use(cors({
   origin: 'https://cryptoprojectredux.netlify.app',
@@ -117,4 +118,4 @@ app.post("/logout", (req, res) => {
   res.json({ message: "Logged out" });
 });
 
-app.listen(3001, () => console.log('Server is running on port 3001'));
+app.listen(PORT, () => console.log('Server is running on port 3001'));
