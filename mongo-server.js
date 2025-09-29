@@ -58,7 +58,7 @@ app.post("/login", async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       secure: true,     // true just for HTTPS
-      sameSite: "lax",   // or 'none' + secure: true for cross-site
+      sameSite: "none",   // or 'none' + secure: true for cross-site
       maxAge: 6 * 60 * 60 * 1000, // 6 h
       domain: "mongo-backend-rya4.onrender.com" 
     });
