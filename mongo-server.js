@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: 'https://cryptoprojectredux.netlify.app/',
+  origin: 'https://cryptoprojectredux.netlify.app',
   credentials: true  
 }));
 mongoose.connect(process.env.MONGO_URI, {
